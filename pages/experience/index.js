@@ -35,22 +35,27 @@ const index = ({ experiences }) => {
             },
           }}>
           {experiences === null ? "Loading..." : experiences.map((experience, i, {length}) => (
-            <TimelineItem>
+            <TimelineItem key={experience.id}>
             <TimelineSeparator>
               <TimelineDot />
               {i + 1 === length ? null : (<TimelineConnector />) }                         
             </TimelineSeparator>
             <TimelineContent>
               <Grid container>
-                <Grid item xs={12} md={6}>
-                  <Typography>{experience.position.name}</Typography>
-                  <Typography>{experience.company.name}</Typography>
-                  <Typography>{dayjs(experience.start_date).format('MMM YYYY')} - {dayjs(experience.end_date).format('MMM YYYY')}</Typography>
+                <Grid item xs={12} md={1}>   
+                  <img
+                    srcSet={`${experience.company.image}?w=5&h=5&fit=crop&auto=format&dpr=2 35x`}
+                    src={`${experience.company.image}?w=5&h=5&fit=crop&auto=format`}
+                    alt={experience.company.name}
+                    loading="lazy"
+                  />
+                </Grid>
+                <Grid item xs={12} md={11}>
+                  <Typography variant='h5'sx={{fontWeight: '500'}}>{experience.position.name}</Typography>
+                  <Typography variant='body1' sx={{fontWeight: '400', margin: '4px 0'}}>{experience.company.name}</Typography>
+                  <Typography sx={{fontWeight: '100', marginBottom: '16px'}}>{dayjs(experience.start_date).format('MMM YYYY')} - {dayjs(experience.end_date).format('MMM YYYY')}</Typography>
                   <Typography>{experience.description}</Typography>
-                </Grid>
-                <Grid item xs={12} md={6}>
-                  <Typography>Image Here</Typography>
-                </Grid>
+                </Grid>                
               </Grid>
             </TimelineContent>
           </TimelineItem> 
