@@ -8,10 +8,10 @@ const Layout = ({ children }) => {
   return (
     <>
     <Grid container spacing={8}>
-        <Grid item xs={12} md={4} sx={{marginTop: '200px'}} >
+        <Grid item xs={12} md={3} sx={{marginTop: '200px'}} >
             <Nav />
         </Grid>
-        <Grid item xs={12} md={8} sx={{marginTop: '200px'}}>
+        <Grid item xs={12} md={9} sx={{marginTop: '200px'}}>
              {children}
         </Grid>
     </Grid>

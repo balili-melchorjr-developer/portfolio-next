@@ -1,17 +1,14 @@
 import "@/styles/globals.css";
-import { Montserrat } from 'next/font/google'
-
-const montserrat = Montserrat({
-    weight: ['400', '100', '900'],
-    style: ['normal', 'italic'],
-    subsets: ['latin'],
-})
+import { ThemeProvider } from '@mui/material/styles';
+import theme from "./theme";
 
 export default function App({ Component, pageProps }) { 
 
   return(
-    <main className={montserrat.className}>
-      <Component {...pageProps} />;
+    <main>
+    <ThemeProvider theme={theme}>
+       <Component {...pageProps} />;
+    </ThemeProvider>      
     </main>    
   ) 
   

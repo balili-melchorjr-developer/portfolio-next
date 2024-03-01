@@ -17,14 +17,17 @@ const Nav = () => {
         },
 
         customLayout: {
-            padding: '25px',
+            padding: '0 50px',
+            marginTop: '105px',
             fontFamily: 'Montserrat'
         },
 
         customCard: {
             cursor: 'pointer',
             margin: '25px auto',
-            FontFace: 'Montserrat!important'
+            backgroundColor: 'transparent',
+            color: 'white',
+            fontWeight: '900'            
         }
 
         
