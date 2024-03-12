@@ -18,10 +18,11 @@ const index = () => {
               Accept: "application/json",
           },
           body: JSON.stringify({
-              access_key: "YOUR_ACCESS_KEY_HERE",
+              access_key: "a5cf367c-b616-4574-b94f-90267af84cf9",
               name: e.target.full_name.value,
               email: e.target.email.value,
               message: e.target.message.value,
+              subject: "Jhun Portfolio New Submission",
           }),
       });
       const result = await response.json();
@@ -36,9 +37,14 @@ const index = () => {
         <Grid item md={12}>
           <Typography variant='h1' sx={{ fontWeight: '700', opacity: '0.7'}}>Team Up!</Typography>
         </Grid>
-      </Grid>
-      <Grid container>
+      </Grid> 
+      <Grid container sx={{marginTop: '100px'}}>
         <Grid item xs={12} md={8} sx={{paddingRight:"100px"}}>
+          <Box>
+            <Typography variant='h5' sx={{lineHeight: '1.2', marginBottom: '50px'}}>
+              <span style={{fontWeight: '600'}}>Co-create: </span>Actively engage as a team player in collaborative efforts with various partners to generate innovative solutions, products, or content. Contribute ideas, expertise, and resources in a synergistic manner to achieve shared goals and outcomes.
+            </Typography>
+          </Box>
           <form onSubmit={handleSubmit}>
             <Box sx={{marginBottom: "25px"}}>
                 <Label htmlFor="full_name" sx={{marginBottom: "25px"}}>Full Name</Label>
@@ -50,7 +56,7 @@ const index = () => {
             </Box>
             <Box sx={{marginBottom: "25px"}}>
               <Label htmlFor="message">Message</Label>
-              <Textarea  placeholder="Type your message here." rows="10" required />
+              <Textarea name="message" placeholder="Type your message here." rows="10" required />
             </Box>
             <Button type="submit" variant="outline">Submit Form</Button>
         </form>

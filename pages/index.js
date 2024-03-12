@@ -22,7 +22,7 @@ export default function Home({ categories }) {
               I am a dedicated and passionate software developer with a proven track record of delivering high-quality software applications that solve complex problems and drive business value. I am always seeking to expand my knowledge and skills and stay up-to-date with the latest developments in the field to ensure that I am providing the best possible solutions for my clients and users.
             </Typography>
             <Typography variant='h5' sx={{lineHeight: '1.2', marginBottom: '100px'}}>
-              <span sx={{fontWeight: '600'}}>Co-create:</span>Actively engage as a team player in collaborative efforts with various partners to generate innovative solutions, products, or content. Contribute ideas, expertise, and resources in a synergistic manner to achieve shared goals and outcomes.
+              <span style={{fontWeight: '600'}}>Co-create: </span>Actively engage as a team player in collaborative efforts with various partners to generate innovative solutions, products, or content. Contribute ideas, expertise, and resources in a synergistic manner to achieve shared goals and outcomes.
             </Typography>
             <Button variant="outlined">Team Up</Button>
         </Grid>
