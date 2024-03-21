@@ -30,7 +30,7 @@ const index = ({ categories }) => {
       </Grid> 
 
       {categories === null ? "Loading" : categories.map(category => (
-         <Grid container key={category.id} sx={{textAlign: 'center', marginTop: '100px', marginBottom: '200px', paddingRight: '500px'}}>
+          <Grid container key={category.id} sx={{textAlign: 'center', marginTop: '100px', marginBottom: '200px', paddingRight: '500px'}}>
           {category.name === "The Foundation" ? (
             <Grid item md={12} >
               <Typography variant='h3' sx={{ marginBottom: '50px', fontWeight: '500'}}>{category.name}</Typography>                    
@@ -51,13 +51,15 @@ const index = ({ categories }) => {
                     <Grid item xs={2}>
 
                     </Grid>    
-                    <Grid container direction="row" xs={8} justifyContent="center">
-                      {category.technology.map(item => (
-                      <Box key={item.id} justifyContent='center' sx={{textAlign: 'center', margin: '0 30px', width: '100px', marginTop: '40px'}}>
-                        <Avatar src={`${item.image}`}  variant='square' sx={{ height: '120px', width: '120px', margin: 'auto'}}/>
-                        <Typography sx={{marginTop: '10px', textAlign: 'center', marginLeft: '20px'}}>{item.name}</Typography>
-                      </Box>  
-                      ))} 
+                    <Grid item xs={8}>
+                      <Grid container justifyContent="center">
+                        {category.technology.map(item => (
+                        <Box key={item.id} justifyContent='center' sx={{textAlign: 'center', margin: '0 30px', width: '100px', marginTop: '40px'}}>
+                          <Avatar src={`${item.image}`}  variant='square' sx={{ height: '120px', width: '120px', margin: 'auto'}}/>
+                          <Typography sx={{marginTop: '10px', textAlign: 'center', marginLeft: '20px'}}>{item.name}</Typography>
+                        </Box>  
+                        ))} 
+                      </Grid>                      
                     </Grid>  
                     <Grid item xs={2}>
 
@@ -83,13 +85,15 @@ const index = ({ categories }) => {
                   <Grid item xs={2}>
 
                   </Grid>
-                  <Grid container directio='row' xs={8} justifyContent='center'>
-                    {category.technology.map(item => (
-                      <Box key={item.id} justifyContent='center' sx={{textAlign: 'center', margin: '0 30px', width: '100px', marginTop: '40px'}}>
-                        <Avatar src={`${item.image}`}  variant='square' sx={{ height: '120px', width: '120px', margin: 'auto'}}/>
-                        <Typography sx={{marginTop: '10px', textAlign: 'center', marginLeft: '20px'}}>{item.name}</Typography>
-                      </Box> 
-                    ))}
+                  <Grid item xs={8}>
+                    <Grid container justifyContent='center'>
+                      {category.technology.map(item => (
+                        <Box key={item.id} justifyContent='center' sx={{textAlign: 'center', margin: '0 30px', width: '100px', marginTop: '40px'}}>
+                          <Avatar src={`${item.image}`}  variant='square' sx={{ height: '120px', width: '120px', margin: 'auto'}}/>
+                          <Typography sx={{marginTop: '10px', textAlign: 'center', marginLeft: '20px'}}>{item.name}</Typography>
+                        </Box> 
+                      ))}
+                    </Grid>                    
                   </Grid>
                   <Grid item xs={2}>
 
@@ -103,13 +107,15 @@ const index = ({ categories }) => {
                   <Grid item xs={2}>
 
                   </Grid>
-                  <Grid container direction='row' xs={8} justifyContent='center'>
-                    {category.technology.map(item => (
-                      <Box key={item.id} justifyContent='center' ali sx={{textAlign: 'center', margin: '0 30px', width: '100px', marginTop: '40px'}}>
-                        <Avatar src={`${item.image}`}  variant='square' sx={{ height: '120px', width: '120px', margin: 'auto'}}/>
-                        <Typography direction='row' justifyContent='center' sx={{marginTop: '10px', textAlign: 'center', marginLeft: 'auto'}}>{item.name}</Typography>
-                      </Box> 
-                    ))}
+                  <Grid item xs={8} >
+                    <Grid container justifyContent='center'>
+                      {category.technology.map(item => (
+                        <Box key={item.id} justifyContent='center' ali sx={{textAlign: 'center', margin: '0 30px', width: '100px', marginTop: '40px'}}>
+                          <Avatar src={`${item.image}`}  variant='square' sx={{ height: '120px', width: '120px', margin: 'auto'}}/>
+                          <Typography direction='row' justifyContent='center' sx={{marginTop: '10px', textAlign: 'center', marginLeft: 'auto'}}>{item.name}</Typography>
+                        </Box> 
+                      ))}
+                    </Grid>                    
                   </Grid>
                   <Grid item xs={2}>
 

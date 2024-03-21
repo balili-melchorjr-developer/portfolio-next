@@ -112,3 +112,19 @@ a {
     color-scheme: dark;
   }
 }
+
+
+.card-new-style {
+  border-radius: 0;
+  border-bottom: 2px solid transparent;
+  transition: .5s;
+}
+
+.card-new-style:hover {
+  border-bottom: 2px solid white;  
+  
+}
+
+.card-new-style:active {
+  border-bottom: 2px solid white;  
+}
